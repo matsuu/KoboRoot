@@ -121,3 +121,9 @@ export UBOOT_RECOVERY=/etc/u-boot/$PLATFORM/u-boot.recovery
 		ACTION=add DEVNAME=/dev/mmcblk1p1 /usr/local/Kobo/udev/sd
 	fi
 ) &
+
+(
+	if [ -e /mnt/onboard/run.sh ]; then
+		/mnt/onboard/run.sh
+	fi
+) &
